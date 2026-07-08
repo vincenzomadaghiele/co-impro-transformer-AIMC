@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions - Vincenzo Madaghiele, Stefano Fasciani, Tejaswinee Kelkar, Çağrı Erdem">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="Department of Musicology, University of Oslo">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="">
+  <meta name="twitter:image:alt" content="Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions - Vincenzo Madaghiele, Stefano Fasciani, Tejaswinee Kelkar, Çağrı Erdem | University of Oslo</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="synth.png">
+  <link rel="apple-touch-icon" href="synth.png">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Vincenzo Madaghiele, , , ",
+        "affiliation": {
+          "@type": "Department of Musicology",
+          "name": "University of Oslo"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Stefano Fasciani",
+        "affiliation": {
+          "@type": "Department of Musicology",
+          "name": "University of Oslo"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Tejaswinee Kelkar",
+        "affiliation": {
+          "@type": "Department of Musicology",
+          "name": "University of Oslo"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Çağrı Erdem",
+        "affiliation": {
+          "@type": "Department of Informatics",
+          "name": "University of Oslo"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI and Music Creativity (AIMC) 2026"
+    },
+    "url": "https://vincenzomadaghiele.github.io/sound-matching-RL-NIME/",
+    "image": "",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "synth.png",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="https://www.vmad.me/" target="_blank">Vincenzo Madaghiele</a>,</span>
+                <span class="author-block">
+                  <a href="https://stefanofasciani.com/" target="_blank">Stefano Fasciani</a>,</span>
+                  <span class="author-block">
+                    <a href="https://tejaswinee.com/" target="_blank">Tejaswinee Kelkar</a>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://www.cagrierdem.net/" target="_blank">Çağrı Erdem</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">Department of Musicology, University of Oslo<br>AI and Music Creativity (AIMC) 2026</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://github.com/vincenzomadaghiele/RL-synth-control/blob/main/RLsynth_NIME26.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/vincenzomadaghiele/RL-synth-control" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser video -->
+      <img src="model_diagram5.png" alt="teaser_image" loading="lazy"/>
+      <!-- TODO: Replace with your video description -->
+      <h2 class="subtitle has-text-centered">
+
+Block diagram of the deep-learning model architecture. Events in source and target subsequences are selected from a time interval of duration <i>T</i>  to predict the descriptor vector of the next target event. Each subsequence is associated with a &tau; feature vector representing local time of each event. After time2vec encoding, the time-augmented sequences are processed by a regression transformer that outputs the descriptors and the duration of the next target event.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+        This paper presents a live semi-autonomous system that co-improvises with a live musician using a model learned from the relationship observed in paired recordings of an improvising duo. This responsive system is based on a deep learning approach that models the relations between sequences of events produced by co-playing musicians in continuous time, using transformer models. We present the architecture for simultaneous sequences of sonic events and provide a quantitative evaluation on several representative tasks. Results are compared against a canonical transformer and a multichannel Factor Oracle, the latter being a widely used model for live sequence‑based symbolic music generation. We detail a live implementation employing concatenative synthesis and introduce a customization procedure in which the generative model is iteratively retrained on curated, satisfactory sections from sound recordings of actual human-system co-improvisational interactions. This iterative fine-tuning enables the model's stylistic output to diverge from the original training corpus. Two musical use cases demonstrate the application of this technique.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+
+
+<!-- Youtube video -->
+<!--<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">-->
+      <!-- Paper video. -->
+      <!--<h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">-->
+            <!-- TODO: Replace with your YouTube video ID -->
+            <!--<iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+<!-- End youtube video -->
+
+
+
+<section class="hero is-small">
+    <div class="hero-body">
+    <div class="container">
+
+      <h2 class="title is-3">Audio Examples</h2><br>
+      <div class="columns is-centered has-text-centered">
+
+    <table style="width:100%">
+      <tr>
+        <th>Source</th>
+        <th>Target</th>
+        <th>Example 1</th>
+        <th>Example 2</th>
+        <th>Example 3</th>
+      </tr>
+      <tr>
+        <td>Bass</td>
+        <td>Guitar</td>
+        <td><audio src="00_sounds/Bass-Guitar/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Bass-Guitar/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Bass-Guitar/song1.wav" controls></audio></td>
+      </tr>
+      <tr>
+        <td>Guitar</td>
+        <td>Bass</td>
+        <td><audio src="00_sounds/Guitar-Bass/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Guitar-Bass/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Guitar-Bass/song1.wav" controls></audio></td>
+      </tr>
+      <tr>
+        <td>Drums</td>
+        <td>Guitar</td>
+        <td><audio src="00_sounds/Drums-Guitar/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Drums-Guitar/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Drums-Guitar/song1.wav" controls></audio></td>
+      </tr>
+      <tr>
+        <td>Guitar</td>
+        <td>Drums</td>
+        <td><audio src="00_sounds/Guitar-Drums/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Guitar-Drums/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Guitar-Drums/song1.wav" controls></audio></td>
+      </tr>
+      <tr>
+        <td>Bass</td>
+        <td>Drums</td>
+        <td><audio src="00_sounds/Bass-Drums/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Bass-Drums/song2.wav" controls></audio></td>
+        <td><audio src="00_sounds/Bass-Drums/song3.wav" controls></audio></td>
+      </tr>
+      <tr>
+        <td>Drums</td>
+        <td>Bass</td>
+        <td><audio src="00_sounds/Drums-Bass/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Drums-Bass/song1.wav" controls></audio></td>
+        <td><audio src="00_sounds/Drums-Bass/song1.wav" controls></audio></td>
+      </tr>
+    </table>
+      </div><br><br>
+    </div>
+  </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>
+    @inproceedings{madagAIMC26,
+     address = {Berlin, Germany},
+     title = {Modeling Relations Between Musical Events in Continuous Time with Transformer Models for Live Co-Improvisational Interactions},
+     author = {Madaghiele, Vincenzo and Fasciani, Stefano and Kelkar, Tejaswinee and Erdem, Çağrı},
+     booktitle = {Proceedings of the 7th International Conference on AI and Music Creativity},
+     track = {Paper},
+     year = {2026}
+    }
+      </code>
+      </pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
